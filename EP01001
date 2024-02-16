@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
-long long luythua(int a)
-{
-    long long b = 1;
-    for (int i = 1; i <= a; i++)
-    {
-        b *= (long long)i;
-    }
-    return b;
-}
+
 int main()
 {
     int n;
     cin >> n;
-    long long a = 0;
-    for (int i = 1; i <= n; i++)
+    while (n--)
     {
-        a += (long long)luythua(i);
+        char chu;
+        cin >> chu;
+        if (chu >= 'a' && chu <= 'z')
+        {
+            chu = toupper(chu);
+        }
+        else if (chu >= 'A' && chu <= 'Z')
+        {
+            chu = tolower(chu);
+        }
+        cout << chu << endl;
     }
-    cout << a;
 }
