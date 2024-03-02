@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers Sum</title>
+    <style>
+       
+        body {
+            font-family:'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d0de9f;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            border-radius: 20px ;
+            box-shadow: 0 0 10px rgba(30, 68, 206, 0.68);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #297fdb;
+            color: #efe6e6;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Điền vào 2 số a và b (a < b)</h2>
+        <input type="number" id="numA" placeholder="Nhập số a">
+        <br>
+        <input type="number" id="numB" placeholder="Nhập số b">
+        <br>
+        <button onclick="tong()">Tính tổng các số nguyên tố</button>
+        <br>
+        <p id="ketqua"></p>
+    </div>
+
+    <script>
+
+        function ngto(num) {
+       
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+            if (num % 2 === 0 || num % 3 === 0) return false;
+            let i = 5;
+            while (i * i <= num) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+                i += 6;
+            }
+            return true;
+        }
+
+        function tong() {
+            
+            const a = parseInt(document.getElementById("numA").value);
+            const b = parseInt(document.getElementById("numB").value);
+
+            if (isNaN(a) || isNaN(b) || a >= b) {
+                document.getElementById("ketqua").innerText = "Invalid input!";
+                return;
+            }
+
+            let sum = 0;
+            for (let i = a; i <= b; i++) {
+                if (ngto(i)) {
+                    sum += i;
+                }
+            }
+            document.getElementById("ketqua").innerText = "Tổng các số nguyên tố giữa " + a + " và " + b + " là: " + sum;
+        }
+    </script>
+</body>
+</html>
