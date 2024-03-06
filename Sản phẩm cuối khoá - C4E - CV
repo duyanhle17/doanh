@@ -195,7 +195,7 @@
                 </div>
                 <div class="tieude1">
                    <h1 class="noidung" >Contact </h1> 
-                    <hr class="vien"> </hr>
+                    <!-- <hr class="vien"> </hr> -->
                     <p id="chieurong"></p>
                     <div class="thongtin">
                         <p> ☎️ 0987517643</p>
@@ -206,7 +206,7 @@
                 <!-- <br></br> -->
                 <div class="tieude1">
                    <h1 class="noidung" > Education </h1> 
-                    <hr class="vien"> </hr>
+                    <!-- <hr class="vien"> </hr> -->
                     <p id="chieurong"></p>
                     <div class="thongtin">
                         <div>
@@ -224,7 +224,7 @@
             <div class="phai">
                 <div class="tieude2">
                    <h1 class="noidung" >Achievements </h1> 
-                    <hr class="vien"> </hr>
+                    <!-- <hr class="vien"> </hr> -->
                     <p id="chieurong"></p>
                     <div class="thongtin">
                         <p> 🥉 HOMC 2018 bronze medal</p>
@@ -234,7 +234,7 @@
                 </div>
                 <div class="tieude2">
                    <h1 class="noidung" >Skill </h1> 
-                    <hr class="vien"> </hr>
+                    <!-- <hr class="vien"> </hr> -->
                     <p id="chieurong"></p>
                     <div class="thongtin">
                         <div>
@@ -253,7 +253,7 @@
                 </div>
                 <div class="tieude2">
                    <h1 class="noidung" >Career goals </h1> 
-                    <hr class="vien"> </hr>
+                    <!-- <hr class="vien"> </hr> -->
                     <p id="chieurong"></p>
                     <div class="thongtin">
                         <p> 💻 🧑‍💻 Software engineer</p>
