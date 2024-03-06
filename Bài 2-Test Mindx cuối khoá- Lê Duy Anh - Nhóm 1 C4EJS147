@@ -1,4 +1,4 @@
-function numberOneTriangle(n) {
+function tamgiac(n) {
 
     if (n < 1 || n > 10) {
         console.log("Số nhập vào không hợp lệ.");
@@ -19,4 +19,4 @@ function numberOneTriangle(n) {
 }
 
 
-numberOneTriangle(7); //nhập số ở đây để vẽ tam giác
+tamgiac(7); //nhập số ở đây để vẽ tam giác
