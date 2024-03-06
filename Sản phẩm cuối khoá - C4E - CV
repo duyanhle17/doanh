@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Duy Anh Lê</title>
+    
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+
+#bg {
+    background-color :rgba(61, 59, 59, 0.73);
+    font-family:'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    
+   
+
+    
+}
+.bia-nen {
+    background-color: rgb(235, 228, 228);
+    margin:10px 300px 200px 300px;
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+    /* text-align:left; */
+      text-align: center;
+    max-width: 100%;
+    /* justify-content: center;
+            align-items: center; */
+    /* width:70%; */
+    /* height:90%; */
+
+    position:absolute;
+}
+
+#anh_bia {
+    /* display:inline-flex; */
+    /* border-style: solid; */
+    align-items: center;
+    padding:15px 20px 10px 35px;
+    /* margin: 15px 20px 10px 35px; */
+
+}
+.ten {
+    /* display:block */
+    align-items: center;
+    /* text-align: center; */
+    /* padding:15px 20px 10px 25px; */
+    /* margin: 15px 20px 10px 25px; */
+    /* margin-left: 15px; */
+    /* padding-right: 10px; */
+    /* margin-right: 20px; */
+    /* color:white; */
+    /* background-color: rgba(70, 60, 60, 0.738); */
+    /* border-style: dashed;  */
+}
+#anh {
+
+    border-radius: 350px;
+    /* position:absolute */
+    /* width: 80% */
+    /* margin: 5px 100px 0px 90px; */
+      /* text-align: center; */
+      align-items: center;
+      /* padding: 20px; */
+
+}
+
+.trai {
+    width: 500px;
+    width:40%;
+    padding: 15px 10px 15px 20px;
+    /* float:left; */
+    background-color: rgb(159, 140, 129);
+      /* text-align: center; */
+    /* justify-content: center;
+    
+            align-items: center; */
+               /* display: flex; */
+    /* margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 0px; */
+    /* text-align: center */
+    /* padding: 0px 100px 0px 100px; */
+    /* margin: 0px 100px 0px 100px; */
+}
+.cv {
+    display:inline-flex
+    /* flex-wrap:wrap; */
+ 
+}
+
+.heading {
+    display:inline-flex;
+
+    
+
+}
+.phai {
+    width: 500px;
+     width:60%;
+       text-align: center;
+    /* height: 800px; */
+    /* width:0%; */
+    box-sizing: border-box;
+    background-color: rgb(171, 183, 178);
+     padding: 15px 10px 0px 0px;
+     /* margin:10px 0px 0px 20px; */
+    /* margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 0px; */
+    
+    
+
+}
+/* .hop-head {
+    padding: 2px 0px 5px 5px ;
+} */
+
+
+/* #anh2 {
+ 
+    border-radius: 9px;
+
+} */
+.khaulenh {
+    flex-direction: column;
+}
+.vien {
+    color:rgb(66, 67, 85);
+    width:70%;
+    /* margin: 0px 50px 0px 50px; */
+
+}
+/* .thongtin {
+    margin: 0px 80px 10px 0px;
+} */
+.tieude1 {
+    /* margin: 0px 10px 0px 10px; */
+    /* border-style: solid; */
+      /* text-align: center; */
+      /* align-items: center;  */
+      align-items: center;
+    /* padding:5px 20px 5px 35px; */
+    margin: 5px 20px 5px 35px;
+}
+.tieude2 {
+    /* margin: 0px 10px 0px 10px; */
+    /* border-style: solid; */
+    /* height:30%; */
+      /* text-align: center; */
+      /* align-items: center;  */
+      align-items: center;
+    padding:0px 20px 17px 35px;
+    margin: 10px 20px 10px 35px;
+}
+.noidung { 
+    /* margin: 0px 100px 0px 140px; */
+    /* position :relative */
+    color:aliceblue;
+    background-color: rgba(70, 60, 60, 0.738);
+    /* border-radius: 20px; */
+    /* width:70% */
+
+}
+@media only screen and (  max-width: 140%)  {
+    .cv {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+        
+    </style>
+
+</head>
+<body id="bg" >
+    <div class="bia-nen" >
+        
+        <div class="cv">
+            <div class="trai">
+                <div id="anh_bia">
+                    <img  id ="anh" src="toan 1-433.jpg" width="55%"> </img>
+                    <div class="ten">
+                         <div><h1 >Lê Duy Anh </h1> </div>
+                         <!-- <div><h1 >Duy  </h1> </div>
+                         <div><h1 >Anh </h1> </div> -->
+                    
+                    </div>
+                </div>
+                <div class="tieude1">
+                   <h1 class="noidung" >Contact </h1> 
+                    <hr class="vien"> </hr>
+                    <p id="chieurong"></p>
+                    <div class="thongtin">
+                        <p> ☎️ 0987517643</p>
+                        <p> ✉️ duyanhle9c1@gmail.com </p>
+                        <p> 🏠 CT4 Vimeco, Tu Mo, Cau Giay, Ha Noi</p>
+                    </div>
+                </div>
+                <!-- <br></br> -->
+                <div class="tieude1">
+                   <h1 class="noidung" > Education </h1> 
+                    <hr class="vien"> </hr>
+                    <p id="chieurong"></p>
+                    <div class="thongtin">
+                        <div>
+                            <h3> 🏫 Posts and Telecommunications Institute of Technology (PTIT)</h3>
+                            <p> A freshman - Information and Technology</p>
+                        </div>
+                        <div>
+                            <h3> 🏫 Hanoi Amsterdam High School for the Gifted</h3>
+                        <!-- <p> College: Posts and Telecommunications Institute of Technology (PTIT)</p> -->
+                            <p> Major: Maths</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="phai">
+                <div class="tieude2">
+                   <h1 class="noidung" >Achievements </h1> 
+                    <hr class="vien"> </hr>
+                    <p id="chieurong"></p>
+                    <div class="thongtin">
+                        <p> 🥉 HOMC 2018 bronze medal</p>
+                        <p>👨🏻‍🎓 12 years of excellent student </p>
+                        <p> Student majoring in Mathematics</p>
+                    </div>
+                </div>
+                <div class="tieude2">
+                   <h1 class="noidung" >Skill </h1> 
+                    <hr class="vien"> </hr>
+                    <p id="chieurong"></p>
+                    <div class="thongtin">
+                        <div>
+                            <h3> Professional</h3>
+                            <p> Majoring in mathematics</p>
+                            <p> Ability to communicate in English</p>
+                            <!-- <h3>Extracurricular activities</h3> -->
+                        </div>
+                        <div>
+                            <h3>Extracurricular activities</h3>
+                            <p> ⚽️ Captain of the school football club</p>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tieude2">
+                   <h1 class="noidung" >Career goals </h1> 
+                    <hr class="vien"> </hr>
+                    <p id="chieurong"></p>
+                    <div class="thongtin">
+                        <p> 💻 🧑‍💻 Software engineer</p>
+                        <p> 👨‍🏫 Coding teacher </p>
+                        <p> Participate in large projects at companies</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+                
+                
+                
+              
+            
+        </div>
+    </div>
+    
+  <script src="./js/1.js" ></script> 
+  
+</body>
+
+</html>
