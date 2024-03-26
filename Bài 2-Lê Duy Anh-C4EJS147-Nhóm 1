@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            /* border-style: solid; */
+            /* border-color: rgb(107, 148, 185); */
+        }
+
+        #colorHex {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #copyButton {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #copyButton:hover {
+            background-color: #45a049;
+        }
+
+        #gradientPicker {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #0000ff, #ff00ff, #ff0000);
+            margin-bottom: 20px;
+            margin-top:20px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="colorHex">#ffffff</div>
+        <button id="copyButton">Copy Mã Màu</button>
+        <div id="gradientPicker"></div>
+        <button onclick="changeColor()">Chọn Màu Ngẫu Nhiên</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor; 
+            document.getElementById('colorHex').innerText = randomColor; 
+        }
+
+        document.getElementById('copyButton').addEventListener('click', function() {
+            var colorHex = document.getElementById('colorHex').innerText;
+            navigator.clipboard.writeText(colorHex); 
+            alert('Đã sao chép mã màu ' + colorHex);
+        });
+    </script>
+</body>
+</html>
