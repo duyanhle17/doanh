@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số Chính Phương</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d0de9f;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            border-radius: 20px ;
+            box-shadow: 0 0 10px rgba(30, 68, 206, 0.68);
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+      <h2>Nhập vào 2 số a và b </h2>
+      <form id="mainForm">
+        <label for="a">Nhập số a:</label>
+        <input type="number" id="a" name="a" required>
+        <label for="b">Nhập số b:</label>
+        <input type="number" id="b" name="b" required>
+        <button type="submit">Hiển thị</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    
+
+    <script>
+        document.getElementById('mainForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var a = parseInt(document.getElementById('a').value);
+            var b = parseInt(document.getElementById('b').value);
+            var result = document.getElementById('result');
+            result.innerHTML = '';
+
+            if (isNaN(a) || isNaN(b) || a >= b) {
+                result.textContent = 'Vui lòng nhập lại số a và b sao cho a < b.';
+                return;
+            }
+
+            result.textContent = 'Các số chính phương trong khoảng từ ' + a + ' đến ' + b + ' là: ';
+            for (var i = a; i <= b; i++) {
+                if (Number.isInteger(Math.sqrt(i))) {
+                    result.textContent += i + ' ';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
