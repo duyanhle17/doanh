@@ -1,0 +1,238 @@
+
+
+// BÀI 1 //
+
+// #include <iostream>
+// #include <cmath>
+// #include <vector>
+// #include <algorithm>
+// #include <climits>
+// #include <fstream>
+
+// using namespace std;
+// int main()
+// {
+//    int n, m;
+//    cin >> n >> m;
+//    int A[n];
+//    for (int i = 0; i < n; i++)
+//    {
+//       cin >> A[i];
+//    }
+//    sort(A, A + n);
+//    cout << A[n - m];
+// }
+
+
+// BÀI 3//
+
+// #include <iostream>
+// #include <vector>
+// #include <cmath>
+// #include <algorithm>
+// #include <iomanip>
+// using namespace std;
+
+// class SinhVien
+// {
+//    static int id;
+
+// public:
+//    string name;
+//    int toan;
+//    int van;
+//    int anh;
+//    int li;
+//    friend istream &operator>>(istream &in, SinhVien &a)
+//    {
+//       in.ignore();
+//       getline(in, a.name);
+//       in >> a.toan >> a.van >> a.anh >> a.li;
+
+//       return in;
+//    }
+//    friend ostream &operator<<(ostream &out, SinhVien a)
+//    {
+
+//       out << a.name << ' ' << (a.toan + a.van + a.anh + a.li) / 4 << endl;
+//       return out;
+//    }
+// };
+// int SinhVien::id = 1;
+// int main()
+// {
+//    SinhVien ds[50];
+//    int N, i;
+//    cin >> N;
+//    for (i = 0; i < N; i++)
+//    {
+//       cin >> ds[i];
+//    }
+//    for (i = 0; i < N; i++)
+//    {
+//       cout << ds[i];
+//    }
+//    float tongdiemtoan = 0;
+//    for (i = 0; i < N; i++)
+//    {
+//       tongdiemtoan += ds[i].toan;
+//    }
+//    float Toan = tongdiemtoan / N;
+//    cout << "trung bình diểm toán là : " <<  Toan << endl;
+//    float tongdiemvan = 0;
+//    for (i = 0; i < N; i++)
+//    {
+//       tongdiemvan += ds[i].van;
+//    }
+//    float Van = tongdiemvan / N;
+//    cout << "trung bình diểm văn là : " <<  Van << endl;
+//    float tongdiemanh = 0;
+//    for (i = 0; i < N; i++)
+//    {
+//       tongdiemanh += ds[i].anh;
+//    }
+//    float Anh = tongdiemanh / N;
+//    cout << "trung bình điểm anh là : " <<  Anh << endl;
+//    float tongdiemli = 0;
+//    for (i = 0; i < N; i++)
+//    {
+//       tongdiemli += ds[i].li;
+//    }
+//    float Li = tongdiemli / N;
+//    cout << "trung binh điểm lí là : " << Li << endl;
+//    return 0;
+// }
+
+// BAI 2//
+
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// #include <iomanip>
+
+// using namespace std;
+
+// class MonHoc
+// {
+// private:
+//    int maMonHoc;
+//    string tenMonHoc;
+//    float diemSo;
+
+// public:
+//    MonHoc(int ma, const string &ten, float diem) : maMonHoc(ma), tenMonHoc(ten), diemSo(diem) {}
+
+//    void inThongTinMonHoc() const
+//    {
+//       cout << "Ma mon hoc: " << maMonHoc << ", Ten mon hoc: " << tenMonHoc << ", Diem: " << fixed << setprecision(2) << diemSo << endl;
+//    }
+
+//    float getDiemSo() const
+//    {
+//       return diemSo;
+//    }
+
+//    string getTenMonHoc() const
+//    {
+//       return tenMonHoc;
+//    }
+// };
+
+// class SinhVien
+// {
+// private:
+//    string maSoSinhVien;
+//    string tenSinhVien;
+//    vector<MonHoc> danhSachMonHoc;
+
+// public:
+//    SinhVien() {}
+
+//    friend istream &operator>>(istream &in, SinhVien &sv)
+//    {
+     
+//       in >> sv.maSoSinhVien;
+//       in.ignore();
+  
+//       getline(in, sv.tenSinhVien);
+
+//       int soMonHoc;
+  
+//       in >> soMonHoc; // nhập số môn học
+
+//       for (int i = 0; i < soMonHoc; ++i)
+//       {
+//          int ma;//mã môn học
+//          string ten;
+//          float diem;
+
+     
+//          in >> ma;
+//          in.ignore();
+   
+//          getline(in, ten);
+
+//          in >> diem;
+
+//          MonHoc mh(ma, ten, diem);
+//          sv.danhSachMonHoc.push_back(mh);
+//       }
+//       return in;
+//    }
+
+//    friend ostream &operator<<(ostream &out, const SinhVien &sv)
+//    {
+//       out << "Ma so sinh vien: " << sv.maSoSinhVien << endl;
+//       out << "Ten sinh vien: " << sv.tenSinhVien << endl;
+//       out << "Danh sach mon hoc: " << endl;
+//       for (const auto &mh : sv.danhSachMonHoc)
+//       {
+//          out << "  ";
+//          mh.inThongTinMonHoc();
+//       }
+//       return out;
+//    }
+// };
+
+// int main()
+// {
+//    int soLuongSinhVien;
+
+//    cin >> soLuongSinhVien;
+//    vector<SinhVien> danhSachSinhVien(soLuongSinhVien);
+
+//    for (int i = 0; i < soLuongSinhVien; ++i)
+//    {
+//       cin >> danhSachSinhVien[i];
+//    }
+
+  
+//    for (const auto &sv : danhSachSinhVien)
+//    {
+//       cout << sv << endl;
+//    }
+
+//    return 0;
+// }
+
+// input : 2
+
+   // cn026
+//     Le Duy Anh 2 1 toan 10 4 van 8
+
+//     cn12
+//         Pham Thi Hao 2 1 toan 5 6 dia 8
+
+// output:Ma so sinh vien: Cn026
+// Ten sinh vien: Le Duy Anh
+// Danh sach mon hoc: 
+//   Ma mon hoc: 1, Ten mon hoc: toan, Diem: 10.00
+//   Ma mon hoc: 4, Ten mon hoc: van, Diem: 8.00
+
+// Ma so sinh vien: cn12
+// Ten sinh vien: Pham Thi Hao
+// Danh sach mon hoc: 
+//   Ma mon hoc: 1, Ten mon hoc: toan, Diem: 5.00
+//   Ma mon hoc: 6, Ten mon hoc: dia, Diem: 8.00 
+
+
