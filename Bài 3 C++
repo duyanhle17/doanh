@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+string encodeString(string s)
+{
+   int arr[26] = {0};
+   string result = "";
+   int tmp;
+   int n = s.length();
+
+   for (int i = 0; i < n; i++)
+   {
+      if ('a' <= s[i] && s[i] <= 'z')
+      {
+         tmp = s[i] - 'a';
+         arr[tmp]++;
+      }
+      if (i == n - 1 || s[i] != s[i + 1])
+      {
+         result += s[i];
+         result += to_string(arr[tmp]);
+         arr[tmp] = 0;
+      }
+   }
+
+   return result;
+}
+
+int main()
+{
+   string s;
+   cin >> s;
+   cout << encodeString(s) << endl;
+   return 0;
+}
