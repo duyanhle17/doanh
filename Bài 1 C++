@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+long long tonguoc(long long n)
+{
+   long long sum = 0;
+   for (long long i = 1; i <= sqrt(n); ++i)
+   {
+      if (n % i == 0)
+      {
+         if (i == n / i)
+         {
+            sum += i; 
+         }
+         else
+         {
+            sum += i + n / i;
+         }
+      }
+   }
+   return sum;
+}
+
+int main()
+{
+   int Test;
+   cin >> Test;
+   vector<long long> results;
+   while (Test--)
+   {
+      long long n;
+      cin >> n;
+      results.push_back(tonguoc(n));
+   }
+   for (long long result : results)
+   {
+      cout << result << endl;
+   }
+   return 0;
+}
