@@ -1,0 +1,70 @@
+#include <iostream>
+#include <map>
+#include <string>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+
+using namespace std;
+
+void display()
+{
+   cout << "Chọn đơn vị tiền tệ:\n";
+   cout << "1. USD\n";
+   cout << "2. EUR\n";
+   cout << "3. VND\n";
+   cout << "4. JPY\n";
+   cout << "Nhập lựa chọn của bạn: ";
+}
+
+double chuyentien(double tien, string fromtien, string totien, map<string, map<string, double>> rates)
+{
+   if (rates.find(fromtien) != rates.end() && rates[fromtien].find(totien) != rates[fromtien].end())
+   {
+      return tien * rates[fromtien][totien];
+   }
+   return -1;
+}
+
+int main()
+{
+   map<string, map<string, double>> rates = {
+       {"USD", {{"EUR", 0.85}, {"VND", 23000}, {"JPY", 110}}},
+       {"EUR", {{"USD", 1.18}, {"VND", 27000}, {"JPY", 130}}},
+       {"VND", {{"USD", 0.000043}, {"EUR", 0.000037}, {"JPY", 0.0048}}},
+       {"JPY", {{"USD", 0.0091}, {"EUR", 0.0077}, {"VND", 210}}},
+   };
+
+   map<int, string> chontien = {
+       {1, "USD"},
+       {2, "EUR"},
+       {3, "VND"},
+       {4, "JPY"}};
+
+   int choice1, choice2;
+   double tien;
+
+   display();
+   cin >> choice1;
+   cout << "Nhập số tiền cần chuyển đổi: ";
+   cin >> tien;
+   cout << "Chọn đơn vị tiền tệ cần chuyển đổi sang:\n";
+   display();
+   cin >> choice2;
+
+   string fromtien = chontien[choice1];
+   string totien = chontien[choice2];
+
+   double tien2 = chuyentien(tien, fromtien, totien, rates);
+
+   if (tien2 != -1)
+   {
+      cout << tien << " " << fromtien << " = " << tien2 << " " << totien << endl;
+   }
+   else
+   {
+      cout << "Lỗi: Không thể chuyển đổi từ " << fromtien<< " sang " << totien << endl;
+   }
+
+   return 0;
+}
