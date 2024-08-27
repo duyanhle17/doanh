@@ -123,7 +123,7 @@ Câu 6: Hiển thị MaDV, TenDV, DonViTinh, DonGia của những dịch vụ đ
 
 SELECT MaDV, TenDV, DonViTinh, DonGia
 FROM DICH_VU_DI_KEM
-WHERE (DonViTinh = 'lớn' AND DonGia > 10000)
+WHERE (DonViTinh = 'lon' AND DonGia > 10000)
 OR (DonViTinh = 'Cai' AND DonGia < 5000);
 
 
